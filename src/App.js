@@ -13,7 +13,7 @@ import ActivityFeed from './ActivityFeed.js'
 const App = () => {
   return (
     <>
-      <div className='main-div bordercolor'>
+      <div className='main-div'>
         <div className='first-div'>
           <Sidebar />
         </div>
