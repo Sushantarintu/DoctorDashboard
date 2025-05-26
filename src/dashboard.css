@@ -154,6 +154,9 @@ footer {
 }
 
 .avtar {
+   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(94, 192, 94);
 }
 
@@ -273,7 +276,7 @@ footer {
   }
 
   .aligndiv2 {
-    flex-direction: column;
+/*     flex-direction: column; */
     align-items: flex-start;
     gap: 10px;
   }
@@ -304,7 +307,7 @@ footer {
 @media (max-width: 480px) {
   .aligndiv3,
   .aligndates {
-    flex-direction: column;
+/*     flex-direction: column; */
     align-items: flex-start;
     gap: 10px;
   }
