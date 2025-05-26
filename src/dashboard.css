@@ -1,16 +1,27 @@
 /* Default styles (for desktop) */
 .main-div {
   display: grid;
-  grid-template-columns: 20% 37% auto;
+  /* grid-template-columns: 20% 37% auto; */
   gap: 4px;
   height: 100vh;
+
+  grid-template-areas:
+    "first second third";
+  grid-template-columns: 20% 37% auto;
 }
 
 .first-div {
+  grid-area: first;
   background-color: #e0e3ef;
   padding: 20px;
 }
+.second-div {
+  grid-area: second;
+}
 
+.third-div {
+  grid-area: third;
+}
 .settings {
   margin-top: 94%;
 }
@@ -197,6 +208,17 @@ footer {
 
 /* ─────────── Media Queries for Responsiveness ─────────── */
 
+/* Medium screen: first and second stay side-by-side, third goes full width below */
+@media (max-width: 992px) {
+  .main-div {
+    grid-template-areas:
+      "first second"
+      "third third";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+  }
+}
+
 /* Tablets */
 @media (max-width: 1024px) {
   .main-div {
@@ -221,6 +243,17 @@ footer {
   .avtar,
   .plus-icon {
     width: 15%;
+  }
+}
+
+/* Small screen: all stacked vertically */
+@media (max-width: 600px) {
+  .main-div {
+    grid-template-areas:
+      "first"
+      "second"
+      "third";
+    grid-template-columns: 1fr;
   }
 }
 
