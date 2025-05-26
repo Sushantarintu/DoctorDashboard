@@ -7,13 +7,17 @@
 
   grid-template-areas:
     "first second third";
-  grid-template-columns: 20% 37% auto;
+  grid-template-columns: 17% 40% auto;
 }
 
 .first-div {
   grid-area: first;
   background-color: #e0e3ef;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .second-div {
   grid-area: second;
